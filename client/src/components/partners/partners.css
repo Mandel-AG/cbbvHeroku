@@ -1,0 +1,18 @@
+.containerPartners{
+   min-height: 20vh;
+   padding: 20px;
+
+}
+
+.divPartners{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   padding: 0 5px;
+   background-color: #141414;
+}
+
+.divPartners img{
+   height: 20vh;
+   width: 20vh;
+}

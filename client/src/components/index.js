@@ -1,0 +1,11 @@
+export { default as Header} from './header/header';
+export { default as Accueil} from './accueil/accueil';
+export { default as Rss} from './rss/Rss';
+export { default as Loader} from './utils/loader';
+export { default as Partners} from './partners/Partners';
+export { default as Club} from './club/Club';
+export { default as Evenements} from './evenements/Evenements';
+export { default as Gallery} from './gallery/Gallery';
+export { default as Contact} from './contact/Contact';
+export { default as Boutique} from './boutique/Boutique';
+export { default as Categories} from './categories/Categories';

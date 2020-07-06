@@ -1,0 +1,25 @@
+textarea {
+   width: 70vw;
+   height: 150px;
+ }
+
+ .divInfos{
+    padding: 2vw;
+ }
+
+ .divInfos h3{
+   text-align: center;
+ }
+
+ /* .divInputContact{
+    padding: 2vw;
+ } */
+
+ .divInputContact h3, .divInputContact p{
+    text-align: center;
+ }
+
+ .divInputContact p{
+    font-weight: 700;
+    font-style: italic;
+ }

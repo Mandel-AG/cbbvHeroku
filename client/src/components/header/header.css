@@ -1,0 +1,99 @@
+.logo{
+   background-color: white;
+   width: 130px;
+   height: 100px;
+   left: 3vw;
+   position: absolute;
+}
+
+.logo img{
+   width: 100%;  
+   height: 100%;
+}
+
+.containerHeader{
+   color: whitesmoke;
+   text-align: center;
+   height: 28.5vh;
+   margin-bottom: 7vh;
+   padding-top: 2vh;
+}
+
+.titleHeader{
+   font-size: 10vh;
+   margin-top: 0;
+   margin-bottom: 1vh;
+   font-family: 'Playball', cursive;
+   /* font-family: 'Fredericka the Great'; */
+}
+
+.subtitleHeader{
+   margin-top: 0;
+   margin-bottom: 4vh;
+   /* font-family: 'Fredericka the Great', cursive; */
+   font-family: 'Playball', cursive;
+}
+
+
+.ulHeader{
+   padding: 0;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   list-style: none;
+   font-family: 'Open Sans', sans-serif;
+   text-decoration: none;
+}
+
+.ulHeader li{
+   text-decoration: none;
+}
+
+.ulHeader .link:hover{
+   border-bottom: 2px solid yellow;
+   cursor: pointer;
+   text-decoration: none;
+   color: whitesmoke;
+}
+
+
+.link{
+   text-decoration: none;
+   color: whitesmoke;
+   height: 3.5vh;
+}
+
+
+@media only screen and (max-width: 400px) {
+
+
+   .logo{
+      background-color: white;
+      width: 100px;
+      height: 40px;
+      left: 3vw;
+      position: absolute;
+}
+
+
+
+   .titleHeader{
+      font-size: 5vh;
+      margin-top: 0;
+      margin-bottom: 1vh;
+      font-family: 'Playball', cursive;
+      /* font-family: 'Fredericka the Great'; */
+   }
+
+
+   .containerHeader{
+      height: 20vh;
+      margin-bottom: 3vh;
+   }
+
+   .ulHeader{
+      font-size: small;
+      font-weight: 600;
+   }
+   
+}
