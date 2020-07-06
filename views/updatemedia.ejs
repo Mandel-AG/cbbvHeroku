@@ -1,0 +1,65 @@
+<html>
+<head>
+  <title>Mon title</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <button id='retour' class="btn btn-dark" type="button"> Retour </button> 
+  <div class="container-fluid">
+    <div class="d-flex flex-column align-items-center justify-content-center w-100" style="height:100vh;">
+      <h1> Modifier Media </h1>
+
+      <form class="d-flex flex-column card w-50" method="post" action="/medias/<%= media._id %>" >
+        <div class="card-body">
+
+            <div class="form-group">
+              <label>Name</label>
+              <input name="name" class="form-control" type="text" value="<%= media.name %>" />
+            </div>
+
+            <div class="form-group">
+              <label>Media Type</label>
+              <select class='btn btn-primary list-group' name="mediaType">
+                <option value="">--Please choose an option--</option>
+                <option class='list-group-item text-body' value="products">products</option>
+                <option class='list-group-item text-body' value="team">team</option>
+                <option class='list-group-item text-body' value="partners">partners</option>
+                <option class='list-group-item text-body' value="event">Events</option>
+              </select>            
+            </div>
+
+            <div class="form-group">
+              <label>Team</label>
+              <select class='btn btn-primary list-group' name="team">
+                <option value="">--Please choose an option--</option>
+                <option class='list-group-item text-body' value="sm1">SM1</option>
+                <option class='list-group-item text-body' value="u20">U20</option>
+                <option class='list-group-item text-body' value="u15">U15</option>
+                <option class='list-group-item text-body' value="u13">U13</option>
+                <option class='list-group-item text-body' value="u11">U11</option>
+                <option class='list-group-item text-body' value="u9">U9</option>
+                <option class='list-group-item text-body' value="u7">U7</option>
+              </select>              
+            </div>
+
+            <div class="form-group">
+              <label>Description</label>
+              <textarea name="description" class="form-control" value="<%= media.description %>" type="text">
+              </textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Picture</label>
+              <input name="file" class="form-control" type="file" />
+            </div>
+
+          <div>
+            <input type="submit" value="Submit" class="btn btn-primary" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script type="text/javascript" src="/javascript/retour.js" ></script>
+</body>
+</html>
