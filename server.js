@@ -4,6 +4,7 @@ cors = require('cors')
 const path = require('path')
 const routing = require('./routes')
 const cookieParser= require('cookie-parser');
+const port = process.env.PORT || 3000;
 
 
 const app = express();
@@ -37,5 +38,5 @@ app.use(routing)
 mongoose.connect('mongodb://localhost/testprojet1', {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false});
 //mongoose.connect('mongodb+srv://badel:@cluster0-f8esg.mongodb.net/testprojet1?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false})
 
-app.listen(3004)
+app.listen(port)
 
