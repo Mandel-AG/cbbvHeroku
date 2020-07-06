@@ -18,8 +18,10 @@ app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 
 app.use(express.static(path.join(__dirname, 'client/build'))); 
-app.get('/front/*', (req, res) => { res.sendFile(path.resolve(__dirname, 'client/build', 'index.html')); 
+app.get('/back/*', (req, res) => { res.sendFile(path.resolve(__dirname, 'views')); 
 console.log('port 3000 en écoute') });
+// app.get('/front/*', (req, res) => { res.sendFile(path.resolve(__dirname, 'client/build', 'index.html')); 
+// console.log('port 3000 en écoute') });
 
 
 
