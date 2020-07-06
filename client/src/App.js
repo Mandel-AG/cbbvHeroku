@@ -25,14 +25,14 @@ class App extends Component{
 
   componentDidMount(){
 		axios.all([
-			axios.get('http://localhost:3004/api/events'),
-			axios.get('http://localhost:3004/api/scores'),
-			axios.get('http://localhost:3004/api/medias'),
-			axios.get('http://localhost:3004/api/clubs'),
-			axios.get('http://localhost:3004/api/products'),
-			axios.get('http://localhost:3004/api/gyms'),
-			axios.get('http://localhost:3004/api/members'),
-			axios.get('http://localhost:3004/api/teams')
+			axios.get('/api/events'),
+			axios.get('/api/scores'),
+			axios.get('/api/medias'),
+			axios.get('/api/clubs'),
+			axios.get('/api/products'),
+			axios.get('/api/gyms'),
+			axios.get('/api/members'),
+			axios.get('/api/teams')
 		])
 
 		.then(axios.spread((events, scores, medias, clubs, products, gyms, members, teams) => {
