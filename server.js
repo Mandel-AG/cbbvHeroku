@@ -46,7 +46,7 @@ app.use(routing)
 
 
 // mongoose.connect('mongodb://localhost/testprojet1', {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false});
-mongoose.connect(process.env.MONGOLAB_URI, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false});
+mongoose.connect(process.env.MONGOLAB_URI || "mongodb://badel:azerty123@ds151586.mlab.com:51586/heroku_79hn351d", {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false});
 // mongoose.connect('mongodb+srv://badel:@cluster0-f8esg.mongodb.net/testprojet1?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false})
 
 
