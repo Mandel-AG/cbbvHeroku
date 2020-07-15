@@ -1,20 +1,30 @@
 .containerPresentationClub{
-
+  background-color: red;
 }
 
 
 .containerMembresClub{
+  background-color: blue;
+}
 
+.containerMembresClub div{
+  background-color: green;
 }
 
 .containerGymnasesClub{
-   
+  background-color: green;
+}
+
+.containerGymnasesClub div{
+  background-color: blueviolet;
 }
 
 .divChaqueGymnase{
+  background-color: yellow;
 
 }
 
 .divChaqueMembre{
+  background-color: orange;
 
 }

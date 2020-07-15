@@ -9,7 +9,8 @@ function Evenements(props){
       <div className='eachEvents' key={ event.id }>
          <h3>{ event.title }</h3>
          <p>{ event.content }</p>
-         <img src={ event.picture} alt={ event.name } width='500px' />
+         {/* <img src={ event.picture} alt={ event.name } width='500px' /> */}
+         <img src={`data:image/png;base64,${props.postImgBase64}`} alt="a"/>
          <p>{event.date}</p>
          {/* {(event.file) ? <img src={ event.file} alt={ event.name } /> : (null)} */}
       </div>

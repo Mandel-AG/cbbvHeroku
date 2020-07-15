@@ -25,14 +25,14 @@ class App extends Component{
 
   componentDidMount(){
 		axios.all([
-			axios.get('ds151586.mlab.com/api/events'),
-			axios.get('ds151586.mlab.com/api/scores'),
-			axios.get('ds151586.mlab.com/api/medias'),
-			axios.get('ds151586.mlab.com/api/clubs'),
-			axios.get('ds151586.mlab.com/api/products'),
-			axios.get('ds151586.mlab.com/api/gyms'),
-			axios.get('ds151586.mlab.com/api/members'),
-			axios.get('ds151586.mlab.com/api/teams')
+			axios.get('http://localhost:3003/api/events'),
+			axios.get('http://localhost:3003/api/scores'),
+			axios.get('http://localhost:3003/api/medias'),
+			axios.get('http://localhost:3003/api/clubs'),
+			axios.get('http://localhost:3003/api/products'),
+			axios.get('http://localhost:3003/api/gyms'),
+			axios.get('http://localhost:3003/api/members'),
+			axios.get('http://localhost:3003/api/teams')
 		])
 
 		.then(axios.spread((events, scores, medias, clubs, products, gyms, members, teams) => {
@@ -104,6 +104,7 @@ class App extends Component{
         games : element.games,
       }))
 
+      // eslint-disable-next-line
       { if( media && event && score && club && product && gym && member && team){
           this.setState({
             events: event,
@@ -122,7 +123,7 @@ class App extends Component{
       }
     }))
     .catch((err)=>{
-      console.error('un requete n\'est pas etablie')
+      console.error('une requete n\'est pas etablie')
     })
   }
   

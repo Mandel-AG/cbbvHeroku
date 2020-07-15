@@ -66,7 +66,9 @@ class Club extends Component{
 
             <div className="containerPresentationClub">
                <h3>Presentation</h3>
-               <p>{club}</p>
+               <div>
+                  <p>{club}</p>
+               </div>
             </div> 
             
             <div className="containerMembresClub">
@@ -76,7 +78,7 @@ class Club extends Component{
 
             <div className="containerGymnasesClub">
                <h3>Gymnases</h3>
-               <p>{gym}</p>
+                  {gym}
             </div>
 
          </>
