@@ -9,7 +9,8 @@ class Categories extends Component{
          teams:[],
 			selectedTeam:[],
 			scores:[],
-			SelectedScore:[]
+			SelectedScore:[],
+			selectedPicture :[]
       }
 	}
 
@@ -26,33 +27,24 @@ class Categories extends Component{
 	filterTeam = (type) =>{
 		const teams = [ ...this.state.teams];
 		const scores = [...this.state.scores];
-		// const filteredTeam = teams.filter( element => element.name.toLowerCase() === type)
-		const filteredTeam = teams.filter( element => element.name === type);
-		// const filteredScore = scores.filter( element => element.homeTeam.toLowerCase() === type)
-		const filteredScore = scores.filter( element => element.homeTeam.trim() === type);
+		const selectedTeam = teams.filter(element => element.name === type);
+
+		//Image
+		const selectedPicture = selectedTeam.map( element => element.picture);
+
+		//Score
+		const SelectedScore = scores.filter( element => element.homeTeam.trim() === type);
+
 		this.setState({
-			selectedTeam : filteredTeam,
-			SelectedScore : filteredScore
+			selectedTeam,
+			SelectedScore,
+			selectedPicture
 		})
 	}
 
 
-	// filterResults = (type) => {
-	// 	const results = this.props.results;
-	// 	const newFilter = [ ...results];
-	// 	const filtered = newFilter.filter( element => element.homeTeam.toLowerCase() === type)
-	// 	this.setState({
-	// 		SelectedResults : filtered
-	// 	})
-	// }
-
-
 
    render(){
-		console.log(this.state.teams, 'state team');
-		console.log(this.props.teams, 'props  team');
-		console.log(this.props.scores, 'props  score');
-		console.log(this.state.scores, 'state  score');
 
 		const filteredScore = this.state.SelectedScore.map(score => (
 			<li key={Math.random()} >
@@ -64,38 +56,11 @@ class Categories extends Component{
 				${ score.opponentScore }`}
 			</li>
 		))
-
-
-		const {selectedTeam} = this.state;
-
-		console.log(selectedTeam)
-
-		const teams = selectedTeam.map(el=>(
-			{
-				name : el.name,
-				picture : el.picture
-			}
-			// console.log(el.picture)
-			// Object.values(el.games)
-		))
-
-		console.log(teams.name);
-		console.log(teams);
-		console.log(this.state.team);
-
-
-		// const team = selectedTeam.map(element => element.name)
 		
-		console.log(selectedTeam)
 
       return(
          <div className='containerCategories'>
 
-			{/* <div className='divResultats'>
-						<ul className='ulAccueilResultats'>
-							{filteredScore}
-						</ul>
-			</div> */}
 						<div className='divEquipes'>
 							<h3>Equipes</h3>
 							<div className='categoriesfiltreEquipe'>
@@ -118,11 +83,9 @@ class Categories extends Component{
 								<div className='divPresentation'>
 									<div className='imagePresentation'>
 
-										<img src={teams.picture} 
-											  alt={teams.name}>
+										<img src={this.state.selectedPicture} 
+											  alt={this.state.selectedTeam}>
 										</img>
-
-										{/* {teams} */}
 
 									</div>
 								</div>
@@ -133,7 +96,7 @@ class Categories extends Component{
 								<div className='divRoster'>
 									<ul className='ulCategoriesRoster'>
 										{/* <p>{selectedTeam.memberList}</p> */}
-										{teams}
+										{/* {teams} */}
 									</ul>
 								</div>
 							</div>
@@ -152,7 +115,6 @@ class Categories extends Component{
 						
 			</div>
 
-         // </div>
       )
    }
 }
